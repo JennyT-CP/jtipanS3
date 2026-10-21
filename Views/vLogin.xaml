@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jtipanS3.Views.vLogin"
+             Title="vLogin">
+    
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="15">
+        
+        <Label 
+            Text="INICIO DE SESIÓN"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <!--IMAGENES-->
+        
+        <!--1. Enlace web (jpg - png)-->
+        <!--<Image Source="https://thumbs.dreamstime.com/b/login-icon-button-vector-illustration-isolated-white-background-127001787.jpg"
+               WidthRequest="150">
+        </Image>-->
+        
+        <!--2. Archivo jpg - png Dentro de los recursos-->
+        <Image Source="login.png"
+               WidthRequest="150">
+        </Image>
+
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Center"
+              RowSpacing="10"
+              ColumnSpacing="10">
+            <!--FILAS-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!--COLUMNAS-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingresa el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   >
+            </Entry>
+
+            <Label Text="Contraseña"
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingresa la contraseña"
+                   IsPassword="true"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+            <Button x:Name="btnIniciarSesion"
+                    Text="Iniciar sesión"
+                    Clicked="btnIniciarSesion_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+
+            <Button x:Name="btnRegistrarUsuario"
+                    Text="Registrar Usuario"
+                    Clicked="btnRegistrarUsuario_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+        </Grid>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
