@@ -4,11 +4,16 @@
              xmlns:local="clr-namespace:jtipanS3"
              x:Class="jtipanS3.App">
     <Application.Resources>
-        <ResourceDictionary>
+        <!--<ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
+
+        <Style x:Key="BotonGlobal" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Bisque"/>
+            <Setter Property="TextColor" Value="Blue"/>
+        </Style>
     </Application.Resources>
 </Application>
